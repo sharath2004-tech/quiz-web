@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoodudu Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Yoodudu Quiz!</h1>
+    <p id="instructions">Select your quiz options below and press Start Quiz.<br>
+    You will be presented with multiple choice questions. Good luck!</p>
+    <form id="quiz-options">
+      <label for="category">Category:</label>
+      <select id="category">
+        <option value="any">Any Category</option>
+        <option value="9">General Knowledge</option>
+        <option value="17">Science & Nature</option>
+        <option value="23">History</option>
+        <option value="21">Sports</option>
+        <option value="22">Geography</option>
+        <!-- Add more categories as needed -->
+      </select>
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="any">Any</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <label for="num-questions">Number of Questions:</label>
+      <input type="number" id="num-questions" min="1" max="20" value="5">
+      <button type="submit" id="start-quiz-btn">Start Quiz</button>
+    </form>
+    <div id="quiz-box"></div>
+    <button id="logout-btn">Logout</button>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
